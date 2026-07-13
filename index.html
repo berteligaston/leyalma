@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ley Alma — Por una pesquisa neonatal ampliada en Argentina</title>
+<meta name="description" content="Alma nació sana. Tenía una enfermedad detectable al nacer con la pesquisa neonatal ampliada, pero nadie nos dijo que ese estudio existía. Trabajamos para que ninguna familia vuelva a pasar por lo mismo.">
+<meta name="theme-color" content="#FAF4EE">
+<!-- Compartir en redes -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:title" content="Ley Alma — Alma nació sana. Su enfermedad era detectable al nacer.">
+<meta property="og:description" content="Por qué hay que ampliar el test del talón en Argentina, y dónde hacerlo hoy. En memoria de Alma Berteli Quevedo.">
+<!-- og:image: agregar una imagen 1200x630 (foto de Alma o placa) cuando esté el dominio -->
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='18' fill='none' stroke='%23C0405F' stroke-width='3'/%3E%3Ccircle cx='20' cy='20' r='9' fill='%23C0405F'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Hanken+Grotesk:ital,wght@0,400..700;1,400..500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FAF4EE;     /* marfil cálido */
+    --paper-2:#F1E7DD;   /* arena para paneles */
+    --ink:#251F2B;       /* tinta ciruela profunda */
+    --ink-soft:#5F5566;
+    --line:#E5D8CC;
+    --rose:#C0405F;      /* la gota — vida, tibieza */
+    --rose-deep:#8A2F49;
+    --rose-wash:#F6E6E9;
+    --sea:#47507A;       /* índigo/pizarra — información, futuro, noche */
+    --sea-deep:#313860;
+    --sea-wash:#E9EAF2;
+    --gold:#B5893C;      /* oro/estrella, sólo decorativo */
+    --shadow:0 1px 2px rgba(37,31,43,.06), 0 12px 34px -18px rgba(138,47,73,.30);
+    --maxw:1080px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Hanken Grotesk",system-ui,-apple-system,sans-serif;
+    font-size:17px;line-height:1.62;font-weight:420;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  }
+  /* textura de papel de filtro, muy sutil */
+  body::before{
+    content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.035;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  @media (prefers-reduced-motion: reduce){body::before{display:none}}
+  main,header,footer{position:relative;z-index:1}
+  h1,h2,h3,h4{font-family:"Fraunces",Georgia,serif;font-weight:400;line-height:1.06;letter-spacing:-.012em;margin:0}
+  h2{font-size:clamp(1.95rem,4.3vw,3.05rem)}
+  h3{font-size:clamp(1.3rem,2.5vw,1.7rem);line-height:1.14}
+  p{margin:0 0 1rem}
+  a{color:var(--rose-deep);text-decoration:none}
+  a:hover{text-decoration:underline}
+  svg.ico{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+  .eyebrow{font-family:"Space Mono",monospace;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--sea-deep)}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,5vw,40px)}
+  .narrow{max-width:720px}
+  section.view{display:none;padding:clamp(56px,9vw,110px) 0;animation:fade .5s ease both}
+  section.view.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion: reduce){section.view{animation:none}}
+
+  /* divisor con el motivo de la gota */
+  .spotrule{display:flex;justify-content:center;align-items:center;gap:11px;padding:clamp(30px,6vw,60px) 0}
+  .spotrule i{width:7px;height:7px;border-radius:50%;background:var(--line)}
+  .spotrule i.mid{width:11px;height:11px;background:var(--rose);box-shadow:inset 0 -1px 2px rgba(143,54,81,.4)}
+
+  /* ---------- NAV ---------- */
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(250,244,238,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;gap:14px;height:68px;max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,5vw,40px)}
+  .brand{display:flex;align-items:center;gap:11px;cursor:pointer;background:none;border:0;padding:0;font:inherit;color:var(--ink);margin-right:auto}
+  .brand .mark{width:27px;height:27px;flex:none;transition:transform .3s}
+  .brand:hover .mark{transform:rotate(-8deg) scale(1.06)}
+  .brand b{font-family:"Fraunces",serif;font-weight:500;font-size:1.3rem;letter-spacing:-.01em}
+  .brand small{font-family:"Space Mono",monospace;font-size:.58rem;letter-spacing:.2em;color:var(--sea-deep);text-transform:uppercase;display:block;margin-top:-3px;font-weight:400}
+
+  /* chip vivo de días */
+  .day-chip{display:none;align-items:center;gap:7px;background:var(--paper-2);border:1px solid var(--line);color:var(--ink-soft);font-family:"Space Mono",monospace;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;padding:6px 12px;border-radius:100px;cursor:pointer;transition:.18s}
+  .day-chip:hover{border-color:var(--rose);color:var(--rose-deep)}
+  .day-chip b{color:var(--rose-deep);font-weight:700}
+  .day-chip .dot{width:7px;height:7px;border-radius:50%;background:var(--rose);animation:pulse 2.4s ease-in-out infinite}
+  @media(min-width:1120px){.day-chip{display:inline-flex}}
+  @media (prefers-reduced-motion: reduce){.day-chip .dot{animation:none}}
+
+  nav.links{display:flex;gap:2px;align-items:center}
+  nav.links button{position:relative;background:none;border:0;font:inherit;font-size:.92rem;color:var(--ink-soft);padding:9px 13px;border-radius:8px;cursor:pointer;transition:color .18s}
+  nav.links button:not(.nav-cta):hover{color:var(--ink)}
+  nav.links button:not(.nav-cta)::after{content:"";position:absolute;left:13px;right:13px;bottom:3px;height:2px;border-radius:2px;background:var(--rose);transform:scaleX(0);transition:transform .25s ease}
+  nav.links button:not(.nav-cta):hover::after{transform:scaleX(.5)}
+  nav.links button.on:not(.nav-cta){color:var(--rose-deep);font-weight:600}
+  nav.links button.on:not(.nav-cta)::after{transform:scaleX(1)}
+  .nav-cta{background:var(--rose);color:#fff;font-weight:600;padding:9px 20px;border-radius:100px;margin-left:8px;box-shadow:var(--shadow);transition:.2s}
+  .nav-cta:hover{background:var(--rose-deep);transform:translateY(-1px)}
+  .nav-cta.on{background:var(--rose-deep)}
+
+  /* hamburguesa animada */
+  .menu-btn{display:none;background:none;border:0;cursor:pointer;padding:0;width:44px;height:44px;align-items:center;justify-content:center}
+  .menu-btn .bars{display:block;position:relative;width:22px;height:16px}
+  .menu-btn .bars span{position:absolute;left:0;height:2px;width:100%;background:var(--ink);border-radius:2px;transition:.3s ease}
+  .menu-btn .bars span:nth-child(1){top:0}
+  .menu-btn .bars span:nth-child(2){top:7px}
+  .menu-btn .bars span:nth-child(3){top:14px}
+  .menu-btn.open .bars span:nth-child(1){top:7px;transform:rotate(45deg)}
+  .menu-btn.open .bars span:nth-child(2){opacity:0}
+  .menu-btn.open .bars span:nth-child(3){top:7px;transform:rotate(-45deg)}
+
+  @media(max-width:900px){
+    nav.links{position:fixed;inset:68px 0 auto 0;flex-direction:column;align-items:stretch;background:var(--paper);border-bottom:1px solid var(--line);padding:14px 20px 24px;gap:0;transform:translateY(-140%);transition:transform .32s cubic-bezier(.4,0,.2,1);box-shadow:var(--shadow)}
+    nav.links.open{transform:none}
+    nav.links button{width:100%;text-align:left;padding:15px 8px;font-size:1.02rem;border-bottom:1px solid var(--line);border-radius:0}
+    nav.links button:not(.nav-cta)::after{display:none}
+    nav.links button.on:not(.nav-cta){background:var(--rose-wash)}
+    .nav-cta{margin:16px 0 0;text-align:center;padding:16px;font-size:1rem;border-bottom:0}
+    .menu-btn{display:flex}
+  }
+
+  /* ---------- BUTTONS ---------- */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font:inherit;font-weight:600;font-size:.97rem;padding:13px 24px;border-radius:100px;border:1.5px solid transparent;cursor:pointer;transition:.2s;text-decoration:none;letter-spacing:.005em}
+  .btn .ico{width:17px;height:17px}
+  .btn.primary{background:var(--rose);color:#fff;box-shadow:var(--shadow)}
+  .btn.primary:hover{background:var(--rose-deep);text-decoration:none;transform:translateY(-1px)}
+  .btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+  .btn.ghost:hover{border-color:var(--rose);color:var(--rose-deep);text-decoration:none}
+  .btn.sea{background:var(--sea);color:#fff}
+  .btn.sea:hover{background:var(--sea-deep);text-decoration:none;transform:translateY(-1px)}
+  .btn.sm{padding:9px 18px;font-size:.88rem}
+  .btn-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+
+  /* ---------- HERO ---------- */
+  .hero{padding:clamp(48px,7vw,88px) 0 clamp(40px,6vw,70px)}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(30px,5vw,64px);align-items:center}
+  @media(max-width:820px){.hero-grid{grid-template-columns:1fr}}
+  .hero h1{font-size:clamp(2.6rem,7vw,4.9rem);font-weight:300;letter-spacing:-.028em;line-height:1.02}
+  .hero h1 em{font-style:italic;color:var(--rose-deep)}
+  .hero .lede{font-size:clamp(1.08rem,2.4vw,1.3rem);color:var(--ink-soft);max-width:34ch;margin-top:1.35rem;line-height:1.5}
+  .dates-tag{font-family:"Space Mono",monospace;font-size:.73rem;letter-spacing:.1em;color:var(--rose-deep);margin-top:24px;display:inline-flex;gap:10px;align-items:center}
+  .dates-tag::before{content:"";width:26px;height:1px;background:var(--rose)}
+
+  /* ---------- SPOT CARD (signature) ---------- */
+  .card-spot{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px 26px 22px;box-shadow:var(--shadow);position:relative}
+  .card-spot .tabhead{font-family:"Space Mono",monospace;font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sea-deep);display:flex;justify-content:space-between;margin-bottom:16px}
+  .spotgrid{display:grid;grid-template-columns:repeat(10,1fr);gap:9px}
+  @media(max-width:820px){.spotgrid{grid-template-columns:repeat(12,1fr);gap:7px}}
+  .spot{aspect-ratio:1;border-radius:50%;border:1.5px solid var(--line);background:var(--paper-2);position:relative;transition:.5s}
+  .spot.filled{background:radial-gradient(circle at 38% 34%, #d76a82, var(--rose) 62%);border-color:var(--rose-deep);box-shadow:inset 0 -2px 4px rgba(143,54,81,.35)}
+  .spot.amm{border:1.6px dashed var(--rose);background:var(--rose-wash);animation:pulse 2.4s ease-in-out infinite}
+  @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(194,76,103,.35)}50%{box-shadow:0 0 0 5px rgba(194,76,103,0)}}
+  @media (prefers-reduced-motion: reduce){.spot.amm{animation:none}}
+  .card-spot .legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:18px;font-size:.82rem;color:var(--ink-soft)}
+  .card-spot .legend i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+  .amm-callout{margin-top:14px;background:var(--rose-wash);border:1px solid #eecdd4;border-radius:12px;padding:11px 14px;font-size:.86rem;line-height:1.5}
+  .amm-callout b{color:var(--rose-deep)}
+
+  /* ---------- STAT STRIP ---------- */
+  .strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper-2);margin-top:clamp(40px,6vw,72px)}
+  .strip-in{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+  @media(max-width:760px){.strip-in{grid-template-columns:repeat(2,1fr)}}
+  .stat{padding:30px clamp(16px,3vw,28px);border-right:1px solid var(--line)}
+  .stat:last-child{border-right:0}
+  @media(max-width:760px){.stat:nth-child(2n){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+  .stat b{font-family:"Fraunces",serif;font-size:clamp(2rem,5vw,2.9rem);font-weight:400;color:var(--rose-deep);display:block;line-height:1}
+  .stat span{font-size:.85rem;color:var(--ink-soft);display:block;margin-top:8px;line-height:1.4}
+
+  /* ---------- GENERIC BLOCKS ---------- */
+  .section-head{max-width:640px;margin-bottom:clamp(30px,5vw,52px)}
+  .section-head .eyebrow{display:block;margin-bottom:14px}
+  .section-head p{font-size:1.1rem;color:var(--ink-soft);margin-top:12px}
+  .lead-serif{font-family:"Fraunces",serif;font-size:clamp(1.3rem,3vw,1.72rem);font-weight:300;line-height:1.4;color:var(--ink)}
+  .prose p{max-width:66ch}
+  .prose h3{margin:2.4rem 0 .8rem}
+
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+  .tile{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;transition:.2s}
+  .tile:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+  .tile .n{font-family:"Space Mono",monospace;color:var(--sea);font-size:.8rem;letter-spacing:.08em}
+  .tile h3{font-size:1.24rem;margin:8px 0 8px}
+  .tile p{font-size:.94rem;color:var(--ink-soft);margin:0}
+
+  .callbox{background:var(--sea-wash);border:1px solid #cfe0e2;border-left:4px solid var(--sea);border-radius:12px;padding:20px 22px;margin:26px 0}
+  .callbox.rose{background:var(--rose-wash);border-color:#eecdd4;border-left-color:var(--rose)}
+  .callbox p:last-child{margin-bottom:0}
+
+  /* ---------- TIMELINE ---------- */
+  .timeline{position:relative;margin-top:20px;padding-left:34px}
+  .timeline::before{content:"";position:absolute;left:9px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--rose),var(--sea))}
+  .tl-item{position:relative;padding:0 0 30px 8px}
+  .tl-item::before{content:"";position:absolute;left:-33px;top:4px;width:16px;height:16px;border-radius:50%;background:var(--paper);border:2.5px solid var(--sea)}
+  .tl-item.key::before{background:var(--rose);border-color:var(--rose-deep)}
+  .tl-item .when{font-family:"Space Mono",monospace;font-size:.75rem;letter-spacing:.06em;color:var(--rose-deep);text-transform:uppercase}
+  .tl-item h4{font-family:"Fraunces",serif;font-size:1.18rem;font-weight:500;margin:3px 0 5px}
+  .tl-item p{font-size:.95rem;color:var(--ink-soft);margin:0;max-width:60ch}
+
+  /* ---------- COUNTDOWN ---------- */
+  .counter-wrap{background:var(--ink);color:#fff;border-radius:22px;padding:clamp(30px,5vw,48px);text-align:center;position:relative;overflow:hidden}
+  .counter-wrap::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% -10%, rgba(194,76,103,.35), transparent 55%);pointer-events:none}
+  .counter-wrap .eyebrow{color:#e9b7c2;position:relative}
+  .counter-wrap h2{color:#fff;margin:10px 0 6px;position:relative;font-weight:300}
+  .clock{display:flex;justify-content:center;gap:clamp(10px,3vw,26px);margin:26px 0 8px;position:relative;flex-wrap:wrap}
+  .clock .unit{min-width:74px}
+  .clock .num{font-family:"Space Mono",monospace;font-weight:700;font-size:clamp(2rem,6vw,3.4rem);line-height:1;color:#fff}
+  .clock .lab{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:#d7a9b4;margin-top:8px}
+  .counter-sub{color:#e7dbdf;position:relative;max-width:52ch;margin:14px auto 0;font-size:.97rem;line-height:1.55}
+
+  /* ---------- BILLS ---------- */
+  .bill{background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(24px,4vw,34px);margin-bottom:22px}
+  .bill .tag{display:inline-block;font-family:"Space Mono",monospace;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;padding:5px 12px;border-radius:100px;margin-bottom:14px}
+  .bill.a .tag{background:var(--sea-wash);color:var(--sea-deep)}
+  .bill.b .tag{background:var(--rose-wash);color:var(--rose-deep)}
+  .bill h3{font-size:1.5rem;margin-bottom:6px}
+  .bill ul{margin:14px 0 0;padding-left:0;list-style:none}
+  .bill li{position:relative;padding-left:26px;margin-bottom:10px;font-size:.96rem;color:var(--ink-soft)}
+  .bill li::before{content:"";position:absolute;left:0;top:9px;width:10px;height:10px;border-radius:50%;background:var(--paper-2);border:2px solid var(--rose)}
+  .bill.a li::before{border-color:var(--sea)}
+
+  /* ---------- FINDER ---------- */
+  .finder-shell{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}
+  .finder-top{padding:24px clamp(20px,3vw,30px);background:var(--paper-2);border-bottom:1px solid var(--line)}
+  .finder-top label{display:block;font-family:"Space Mono",monospace;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sea-deep);margin-bottom:10px}
+  .selectrow{display:flex;gap:12px;flex-wrap:wrap}
+  select,input[type=text],input[type=email],textarea{font:inherit;font-size:1rem;padding:13px 16px;border:1.5px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);width:100%}
+  select:focus,input:focus,textarea:focus{outline:2px solid var(--rose);outline-offset:1px;border-color:var(--rose)}
+  .selectrow select{flex:1;min-width:220px}
+  .finder-body{padding:clamp(20px,3vw,30px)}
+  .prov-name{font-family:"Fraunces",serif;font-size:1.6rem;margin-bottom:2px}
+  .basic-note{background:var(--sea-wash);border-radius:12px;padding:14px 16px;font-size:.91rem;margin:14px 0 22px;line-height:1.5}
+  .basic-note b{color:var(--sea-deep)}
+  .finder-sub{font-family:"Space Mono",monospace;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sea-deep);margin:0 0 12px}
+  .lab{border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:14px}
+  .lab .row1{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+  .lab h4{font-family:"Fraunces",serif;font-size:1.16rem;font-weight:500}
+  .pill{font-family:"Space Mono",monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:100px}
+  .pill.pub{background:#dceee0;color:#2f6b40}
+  .pill.priv{background:#f3e4d3;color:#8a5320}
+  .pill.amm{background:var(--rose-wash);color:var(--rose-deep)}
+  .lab p{font-size:.91rem;color:var(--ink-soft);margin:6px 0 0;line-height:1.5}
+  .lab .meta{font-size:.84rem;margin-top:8px}
+  .disc{font-size:.82rem;color:var(--ink-soft);background:var(--paper-2);border-radius:10px;padding:12px 14px;margin-top:6px;line-height:1.5}
+
+  /* ---------- ACTION ---------- */
+  .action-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:start}
+  @media(max-width:820px){.action-grid{grid-template-columns:1fr}}
+  .form-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px}
+  .field{margin-bottom:14px}
+  .field label{display:block;font-size:.82rem;color:var(--ink-soft);margin-bottom:6px;font-weight:600}
+  .check{display:flex;gap:10px;align-items:flex-start;font-size:.9rem;color:var(--ink-soft)}
+  .check input{margin-top:4px}
+  .way{display:flex;gap:14px;align-items:flex-start;padding:18px 0;border-bottom:1px solid var(--line)}
+  .way:last-child{border-bottom:0}
+  .way .ic{width:40px;height:40px;flex:none;border-radius:11px;background:var(--rose-wash);display:grid;place-items:center;color:var(--rose-deep)}
+  .way .ic svg{width:20px;height:20px}
+  .way h4{font-family:"Fraunces",serif;font-size:1.1rem;font-weight:500;margin-bottom:2px}
+  .way p{font-size:.9rem;color:var(--ink-soft);margin:0;line-height:1.5}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--ink);color:#e9e2e6;padding:52px 0 30px}
+  footer .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}
+  @media(max-width:700px){footer .fgrid{grid-template-columns:1fr}}
+  footer h5{font-family:"Fraunces",serif;font-weight:500;font-size:1.35rem;margin:0 0 8px;color:#fff}
+  footer p{font-size:.9rem;color:#c3b9be;max-width:40ch;line-height:1.55}
+  footer .fcol b{display:block;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:#e9b7c2;font-family:"Space Mono",monospace;margin-bottom:12px;font-weight:400}
+  footer .fcol button{display:block;background:none;border:0;color:#d9cfd4;font:inherit;font-size:.92rem;padding:5px 0;cursor:pointer;text-align:left}
+  footer .fcol button:hover{color:#fff}
+  footer .base{border-top:1px solid #453a44;margin-top:36px;padding-top:20px;font-size:.8rem;color:#9a8f95;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  footer .base .heart{display:inline-flex;align-items:center;gap:5px}
+  footer .base .heart svg{width:13px;height:13px;stroke:var(--rose);fill:var(--rose)}
+  .note-edit{background:#fff8e6;border:1px dashed var(--gold);color:#6b551f;border-radius:8px;padding:2px 8px;font-size:.72rem;font-family:"Space Mono",monospace;display:inline-block;margin-left:6px;vertical-align:1px}
+
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease, transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+  :focus-visible{outline:2.5px solid var(--rose);outline-offset:3px;border-radius:4px}
+  ::selection{background:var(--rose-wash)}
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<header class="nav">
+  <div class="nav-in">
+    <button class="brand" onclick="go('inicio')" aria-label="Ir al inicio">
+      <svg class="mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <circle cx="20" cy="20" r="18" stroke="#C0405F" stroke-width="2"/>
+        <circle cx="20" cy="20" r="9" fill="url(#g)"/>
+        <defs><radialGradient id="g" cx="0.38" cy="0.34" r="0.8"><stop stop-color="#d76a82"/><stop offset="1" stop-color="#C0405F"/></radialGradient></defs>
+      </svg>
+      <span style="text-align:left"><b>Ley Alma</b><small>Pesquisa neonatal ampliada</small></span>
+    </button>
+    <button class="day-chip" onclick="go('proyectos')" aria-label="Días desde el primer contacto con la Legislatura">
+      <span class="dot" aria-hidden="true"></span>Día&nbsp;<b id="navDay">—</b>
+    </button>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="links" onclick="toggleMenu()">
+      <span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+    <nav class="links" id="links">
+      <button data-v="inicio" onclick="go('inicio')">Inicio</button>
+      <button data-v="alma" onclick="go('alma')">Alma</button>
+      <button data-v="epof" onclick="go('epof')">AMM y EPOF</button>
+      <button data-v="test" onclick="go('test')">El test</button>
+      <button data-v="donde" onclick="go('donde')">Dónde hacerlo</button>
+      <button data-v="proyectos" onclick="go('proyectos')">Proyectos</button>
+      <button class="nav-cta" data-v="sumate" onclick="go('sumate')">Sumate</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ================= INICIO ================= -->
+<section id="inicio" class="view active">
+  <div class="wrap hero">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">En memoria de Alma Berteli Quevedo</p>
+        <h1 style="margin-top:16px">Alma nació sana.<br>Su enfermedad era <em>detectable al nacer.</em></h1>
+        <p class="lede">Tenía una enfermedad metabólica que hoy puede encontrarse con una gota de sangre. Nadie nos dijo que ese estudio existía. Cuando llegó el diagnóstico, ya era tarde.</p>
+        <div class="btn-row">
+          <button class="btn primary" onclick="go('sumate')">Sumate al reclamo
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
+          <button class="btn ghost" onclick="go('donde')">Buscar dónde hacer el test</button>
+        </div>
+        <div class="dates-tag">32 días de vida al internarse · 76 días al despedirse</div>
+      </div>
+
+      <!-- SIGNATURE: la tarjeta del talón -->
+      <div class="card-spot reveal">
+        <div class="tabhead"><span>Tarjeta de pesquisa neonatal</span><span>Argentina</span></div>
+        <div class="spotgrid" id="spotgrid" aria-hidden="true"></div>
+        <div class="legend">
+          <span><i style="background:var(--rose)"></i>6 que hoy se buscan por ley</span>
+          <span><i style="background:var(--paper-2);border:1.5px solid var(--line)"></i>Las que faltan</span>
+        </div>
+        <div class="amm-callout">
+          El círculo que faltaba llenar tenía nombre: <b>Acidemia Metilmalónica (cblC)</b>. La pesquisa ampliada la detecta. La obligatoria, todavía no.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="strip">
+    <div class="wrap"><div class="strip-in">
+      <div class="stat reveal"><b>6</b><span>enfermedades que detecta hoy el panel obligatorio en Argentina</span></div>
+      <div class="stat reveal"><b>40+</b><span>enfermedades que puede detectar la pesquisa ampliada (MS/MS)</span></div>
+      <div class="stat reveal"><b>35</b><span>condiciones esenciales en el panel de EE.&nbsp;UU. (RUSP)</span></div>
+      <div class="stat reveal"><b>2007</b><span>último año en que la lista nacional se amplió realmente</span></div>
+    </div></div>
+  </div>
+
+  <div class="wrap" style="padding-top:clamp(56px,8vw,96px)">
+    <div class="narrow reveal">
+      <p class="lead-serif">Este sitio existe por dos razones. Una: que ningún padre o madre vuelva a enterarse demasiado tarde de que la información existía. Dos: que la ley cambie, para que la detección temprana deje de depender de la suerte o del bolsillo.</p>
+    </div>
+    <div class="cards reveal" style="margin-top:40px">
+      <div class="tile" onclick="go('alma')" style="cursor:pointer">
+        <div class="n">01</div><h3>La historia de Alma</h3>
+        <p>Qué pasó, día por día. De un bebé sano a una búsqueda diagnóstica de 41 días.</p>
+      </div>
+      <div class="tile" onclick="go('epof')" style="cursor:pointer">
+        <div class="n">02</div><h3>Entender la AMM y las EPOF</h3>
+        <p>Qué es la Acidemia Metilmalónica y por qué las enfermedades poco frecuentes son un tema de todos.</p>
+      </div>
+      <div class="tile" onclick="go('donde')" style="cursor:pointer">
+        <div class="n">03</div><h3>Dónde hacer el test</h3>
+        <p>Buscá por provincia dónde acceder al panel básico gratuito y al ampliado, público o privado.</p>
+      </div>
+      <div class="tile" onclick="go('proyectos')" style="cursor:pointer">
+        <div class="n">04</div><h3>Los proyectos de ley</h3>
+        <p>Dos caminos concretos para Córdoba. Presentados. Todavía sin avanzar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ALMA ================= -->
+<section id="alma" class="view">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">La historia</span>
+      <h2>Alma Berteli Quevedo</h2>
+      <p>Nació a término, sin complicaciones. Respiró bien, tomó pecho. Todo indicaba una bebé sana. Esta es la cronología de lo que vino después, contada en palabras simples.</p>
+    </div>
+
+    <div class="callbox rose reveal">
+      <p><b>La conclusión primero.</b> Alma tenía una enfermedad genética detectable al nacer con un tamiz neonatal ampliado. El sistema no informó a sus padres que ese estudio existía. El diagnóstico y el tratamiento llegaron cuando el daño ya era irreversible.</p>
+    </div>
+
+    <div class="timeline reveal" style="margin-top:44px">
+      <div class="tl-item">
+        <div class="when">Embarazo</div>
+        <h4>Un embarazo controlado, sin señales</h4>
+        <p>Ecografías del primer y segundo trimestre sin hallazgos. Ninguna malformación ni signo prenatal de enfermedad metabólica.</p>
+      </div>
+      <div class="tl-item">
+        <div class="when">Nacimiento</div>
+        <h4>Nació sana, Apgar normal</h4>
+        <p>Buen peso, sin reanimación. Se hizo la prueba del talón estándar, que en Argentina evalúa 6 enfermedades. El resultado fue normal. Nunca se mencionó que existía un tamiz ampliado.</p>
+      </div>
+      <div class="tl-item">
+        <div class="when">Primeras semanas</div>
+        <h4>“Algo no cerraba”</h4>
+        <p>Pese a alimentarse muy bien, no aumentaba de peso como se esperaba. Aparecieron señales sutiles, sin fiebre ni un cuadro claro.</p>
+      </div>
+      <div class="tl-item key">
+        <div class="when">18 de julio · 32 días de vida</div>
+        <h4>Internación</h4>
+        <p>Ingresó con sospecha de infección (urinaria o viral). Comenzó una búsqueda diagnóstica que sería larguísima.</p>
+      </div>
+      <div class="tl-item">
+        <div class="when">Julio – agosto</div>
+        <h4>Se descartó casi todo</h4>
+        <p>Virus frecuentes, sepsis, enfermedades autoinmunes, Anemia de Fanconi. Aparecieron alteraciones graves: plaquetas muy bajas, glóbulos blancos bajos, anemia progresiva. Necesitó transfusiones constantes. La médula ósea mostró muy baja producción.</p>
+      </div>
+      <div class="tl-item">
+        <div class="when">En paralelo</div>
+        <h4>Compromiso renal y neurológico</h4>
+        <p>Síndrome nefrótico, edema generalizado e insuficiencia renal aguda que requirió diálisis peritoneal. En el cerebro, ventriculomegalia progresiva y signos neurológicos sutiles. Aun así, Alma tenía momentos de respuesta y conexión.</p>
+      </div>
+      <div class="tl-item key">
+        <div class="when">14 de agosto · 62 días de vida</div>
+        <h4>La sospecha correcta, por fin</h4>
+        <p>El equipo de metabolismo, con el Dr. Norberto Guelbert, detectó un perfil alterado (C4 elevado) y homocisteína extremadamente alta (~400). Diagnóstico probable: Acidemia Metilmalónica tipo cblC. Esa misma tarde se inició tratamiento específico: vitamina B12 en altas dosis, carnitina, biotina y fórmula especial.</p>
+      </div>
+      <div class="tl-item">
+        <div class="when">Respuesta</div>
+        <h4>Alma respondió — pero era tarde</h4>
+        <p>Hubo primeros signos de mejoría: reapareció la diuresis, se estabilizaron algunos parámetros. El tratamiento llegó después de semanas de daño acumulado en riñón, sistema nervioso y médula.</p>
+      </div>
+      <div class="tl-item key">
+        <div class="when">28 de agosto · 76 días de vida</div>
+        <h4>Su despedida</h4>
+        <p>Alma sufrió un paro cardiorrespiratorio que no pudo revertirse. Falleció a los dos meses y medio de vida.</p>
+      </div>
+      <div class="tl-item">
+        <div class="when">Después</div>
+        <h4>El diagnóstico definitivo</h4>
+        <p>El exoma genético confirmó Acidemia Metilmalónica tipo cblC: dos variantes en el gen MMACHC, una heredada de cada padre. Ambos son portadores sanos. Los resultados llegaron tras su fallecimiento.</p>
+      </div>
+    </div>
+
+    <div class="callbox reveal" style="margin-top:40px">
+      <p>Los tres médicos principales del caso —Dr. Luis Ahumada, Dra. Mirta Ferreyra y Dr. Norberto Guelbert— coincidieron en que una detección temprana le habría dado a Alma una mejor oportunidad. El equipo la sostuvo con vida y buscó respuestas hasta agotar todas las vías. Lo que faltó no estuvo en la sala: faltó antes, en la información y en el acceso.</p>
+    </div>
+
+    <div class="btn-row reveal">
+      <button class="btn primary" onclick="go('sumate')">Honrá a Alma: sumate</button>
+      <button class="btn ghost" onclick="go('epof')">Qué es la enfermedad de Alma</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EPOF / AMM ================= -->
+<section id="epof" class="view">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Entender el problema</span>
+      <h2>La AMM y las enfermedades poco frecuentes</h2>
+      <p>Para pedir un cambio hay que poder explicarlo. Acá, en lenguaje claro, qué tenía Alma y por qué las EPOF nos importan a todos.</p>
+    </div>
+
+    <div class="prose narrow reveal">
+      <h3>¿Qué es la Acidemia Metilmalónica cblC?</h3>
+      <p>Es un error congénito del metabolismo: el cuerpo no procesa bien ciertas proteínas y la vitamina B12. En el tipo <b>cblC</b> se afecta el metabolismo de la cobalamina (B12), y se acumulan sustancias tóxicas mientras se eleva un marcador llamado <b>homocisteína</b>. Es de herencia autosómica recesiva: hacen falta dos variantes del gen <b>MMACHC</b>, una de cada progenitor, que pueden ser portadores sanos y no tener ningún síntoma.</p>
+      <p>Sin tratamiento temprano, el daño avanza sobre el riñón, la sangre y el sistema nervioso. Con detección precoz, en cambio, existe tratamiento: vitamina B12 en altas dosis (hidroxocobalamina), carnitina, betaína y una fórmula especial. La diferencia entre un desenlace y otro suele ser el <b>tiempo</b>.</p>
+
+      <div class="callbox rose">
+        <p><b>El punto clave.</b> La AMM está entre las enfermedades que <b>sí</b> detecta la pesquisa neonatal ampliada por espectrometría de masa en tándem (MS/MS). No está en el panel obligatorio de 6 enfermedades. Ese vacío es exactamente lo que buscamos cerrar.</p>
+      </div>
+
+      <h3>¿Y qué son las EPOF?</h3>
+      <p>Las <b>enfermedades poco frecuentes</b> (EPOF, también llamadas “raras”) son las que afectan a un número reducido de personas. Individualmente son infrecuentes; en conjunto, no tanto. La mayoría son de origen genético y buena parte se manifiesta al nacer o en la infancia. Muchas son graves, pero varias son <b>tratables si se detectan a tiempo</b>.</p>
+      <p>Por eso la pesquisa neonatal es una de las herramientas de salud pública más costo-efectivas que existen: una gota de sangre puede evitar años de internaciones, secuelas irreversibles o una muerte evitable.</p>
+    </div>
+
+    <div class="cards reveal" style="margin-top:44px">
+      <div class="tile"><div class="n">Herencia</div><h3>Recesiva</h3><p>Dos padres sanos pueden ser portadores sin saberlo. Cada embarazo tiene un riesgo. Saberlo también protege a la familia a futuro.</p></div>
+      <div class="tile"><div class="n">Detección</div><h3>Una gota de sangre</h3><p>La misma muestra del talón, analizada con MS/MS, alcanza para buscar decenas de enfermedades a la vez.</p></div>
+      <div class="tile"><div class="n">Tratamiento</div><h3>Existe</h3><p>Para muchas EPOF metabólicas hay tratamiento. Lo que decide el pronóstico es empezar antes de que el daño se instale.</p></div>
+    </div>
+
+    <div class="btn-row reveal">
+      <button class="btn sea" onclick="go('test')">Ver cómo funciona el test del talón</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TEST DEL TALÓN ================= -->
+<section id="test" class="view">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Cómo estamos</span>
+      <h2>El test del talón, hoy</h2>
+      <p>Es un derecho de todo recién nacido en Argentina y es gratuito. La discusión no es si hacerlo, sino cuántas enfermedades busca.</p>
+    </div>
+
+    <div class="narrow prose reveal">
+      <p>La <b>Ley Nacional 26.279</b> (2007) hace obligatoria la pesquisa neonatal en toda maternidad, pública o privada. En la práctica, el tamiz metabólico de la gotita del talón busca hoy <b>6 enfermedades</b>: hipotiroidismo congénito, fenilcetonuria, fibrosis quística, galactosemia, hiperplasia suprarrenal congénita y deficiencia de biotinidasa. La ley previó incorporar más condiciones “cuando esté científicamente justificado”, pero el panel <b>quedó estancado</b>.</p>
+    </div>
+
+    <div class="callbox reveal">
+      <p><b>Panel obligatorio (6):</b> hipotiroidismo · fenilcetonuria · fibrosis quística · galactosemia · hiperplasia suprarrenal congénita · biotinidasa.</p>
+      <p style="margin-top:10px"><b>Pesquisa ampliada (MS/MS):</b> suma decenas de errores congénitos del metabolismo —aminoacidopatías, acidemias orgánicas, defectos de la β-oxidación y del ciclo de la urea— incluida la <b>Acidemia Metilmalónica</b>. Hoy se ofrece sobre todo de forma privada, salvo excepciones públicas.</p>
+    </div>
+
+    <h3 class="reveal" style="margin-top:46px">Cómo se compara Argentina con el mundo</h3>
+    <div class="cards reveal" style="margin-top:22px">
+      <div class="tile"><div class="n">Argentina</div><h3>6 enfermedades</h3><p>Panel nacional obligatorio. Algunas jurisdicciones suman alguna condición extra; CABA hace pesquisa ampliada en hospitales públicos desde 2014.</p></div>
+      <div class="tile"><div class="n">EE. UU. (RUSP)</div><h3>35 esenciales</h3><p>El panel uniforme recomendado incluye numerosas acidemias y aminoacidopatías, entre ellas la metilmalónica y la propiónica.</p></div>
+      <div class="tile"><div class="n">Madrid, España</div><h3>~23 enfermedades</h3><p>Cribado ampliado que suma MSUD, tirosinemia, MCADD, VLCAD, AMM en varias formas, homocistinuria, SCID, AME y más.</p></div>
+      <div class="tile"><div class="n">Tendencia global</div><h3>Ampliar</h3><p>La evidencia internacional respalda incorporar de forma gradual enfermedades metabólicas y genéticas tratables.</p></div>
+    </div>
+
+    <div class="callbox rose reveal" style="margin-top:40px">
+      <p><b>Lo que nunca nos dijeron.</b> Durante el embarazo y en la maternidad, ni un obstetra, ni un pediatra, ni un afiche en la sala de espera nos informó que existía un panel ampliado ni que podíamos pagarlo de forma particular. En el cronograma de estudios de Alma solo figuraba “test del talón”, sin explicar en qué consistía ni qué enfermedades detectaba. Informar no cuesta. No informar, sí.</p>
+    </div>
+
+    <div class="btn-row reveal">
+      <button class="btn primary" onclick="go('donde')">Buscar dónde hacer el test ampliado</button>
+      <button class="btn ghost" onclick="go('proyectos')">Ver los proyectos de ley</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DONDE ================= -->
+<section id="donde" class="view">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Buscador</span>
+      <h2>Dónde hacer el test del talón</h2>
+      <p>Elegí tu provincia. Te mostramos qué te corresponde gratis por ley y dónde acceder a la pesquisa ampliada —pública o privada— para buscar enfermedades como la AMM.</p>
+    </div>
+
+    <div class="finder-shell reveal">
+      <div class="finder-top">
+        <label for="prov">Elegí tu provincia o jurisdicción</label>
+        <div class="selectrow">
+          <select id="prov" onchange="renderProv()" aria-label="Provincia"></select>
+        </div>
+      </div>
+      <div class="finder-body" id="finderBody"></div>
+    </div>
+
+    <div class="disc reveal" style="margin-top:16px">
+      <b>Cómo leer esto.</b> El panel básico de 6 enfermedades es gratuito y obligatorio en toda maternidad del país. La pesquisa ampliada suele hacerse de forma privada, con muestra de sangre en papel de filtro que puede derivarse a un laboratorio de referencia. <b>Siempre confirmá directamente</b> con el laboratorio el costo, los tiempos y si reciben muestras derivadas. Este directorio es una herramienta comunitaria en construcción: si conocés un centro para sumar o corregir, escribinos.
+    </div>
+    <div class="btn-row reveal">
+      <button class="btn ghost" onclick="go('sumate')">Sumar o corregir un laboratorio</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROYECTOS ================= -->
+<section id="proyectos" class="view">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">La propuesta</span>
+      <h2>Los proyectos de ley “Alma”</h2>
+      <p>No pedimos algo abstracto. Presentamos dos caminos concretos para la Provincia de Córdoba. Se pueden tomar por separado o combinados.</p>
+    </div>
+
+    <!-- COUNTDOWN -->
+    <div class="counter-wrap reveal">
+      <span class="eyebrow">Reloj del expediente</span>
+      <h2>Hace <span id="cd-days-inline">—</span> días que golpeamos la puerta de la Legislatura</h2>
+      <div class="clock" id="clock" role="timer" aria-live="polite">
+        <div class="unit"><div class="num" id="cd-d">00</div><div class="lab">Días</div></div>
+        <div class="unit"><div class="num" id="cd-h">00</div><div class="lab">Horas</div></div>
+        <div class="unit"><div class="num" id="cd-m">00</div><div class="lab">Minutos</div></div>
+        <div class="unit"><div class="num" id="cd-s">00</div><div class="lab">Segundos</div></div>
+      </div>
+      <p class="counter-sub">El 3 de diciembre de 2025 tuvimos el primer contacto formal con la Legislatura de Córdoba. Este reloj corre desde entonces. Sigue corriendo porque el proyecto todavía no avanza.</p>
+    </div>
+
+    <div class="bill a reveal" style="margin-top:40px">
+      <span class="tag">Borrador A · Camino informativo</span>
+      <h3>Programa de Pesquisa Neonatal Ampliada Voluntaria</h3>
+      <p style="color:var(--ink-soft)">Garantiza el <b>derecho a la información</b> y facilita el acceso voluntario al panel ampliado, con impacto presupuestario mínimo. Nadie queda obligado: se informa y se ordena el circuito.</p>
+      <ul>
+        <li>Folleto oficial y afiches obligatorios en maternidades, clínicas y consultorios de obstetricia, explicando qué cubre el panel básico y qué es el ampliado.</li>
+        <li>Constancia en la historia clínica de que la información fue entregada a la familia.</li>
+        <li>Registro provincial de laboratorios habilitados, con control de calidad y trazabilidad.</li>
+        <li>Circuito de confirmación y derivación inmediata ante un resultado sospechoso.</li>
+        <li>Capacitación breve para obstetras, neonatólogos y pediatras.</li>
+      </ul>
+    </div>
+
+    <div class="bill b reveal">
+      <span class="tag">Borrador B · Camino obligatorio</span>
+      <h3>Ampliación del panel obligatorio: de 6 a 20 enfermedades</h3>
+      <p style="color:var(--ink-soft)">Amplía el tamiz obligatorio con inclusión <b>expresa de la Acidemia Metilmalónica</b> y crea una comisión técnica que actualiza la lista con evidencia.</p>
+      <ul>
+        <li>Lista inicial de 20 enfermedades tratables, incluyendo AMM, MSUD, aciduria glutárica tipo I, homocistinuria y defectos del ciclo de la urea.</li>
+        <li>Comisión Técnica Permanente (genetistas, neonatólogos, metabolistas, laboratorios, economistas de la salud y pacientes) que revisa la lista cada 3 años.</li>
+        <li>Estándares de calidad, registro provincial de screening y tiempos máximos de notificación.</li>
+        <li>Informe de impacto presupuestario y convenios con laboratorios para garantizar acceso sin demora.</li>
+        <li>Campañas de capacitación y comunicación pública.</li>
+      </ul>
+    </div>
+
+    <div class="callbox reveal">
+      <p><b>Por qué conviene, incluso en plata.</b> Informar no cuesta. El programa voluntario casi no genera gasto. Y ampliar la pesquisa obligatoria le ahorra al Estado los costos de por vida de las secuelas evitables: internaciones, diálisis, trasplantes y cuidados crónicos. Detectar a tiempo es más humano y más barato.</p>
+    </div>
+
+    <div class="btn-row reveal">
+      <button class="btn primary" onclick="go('sumate')">Pedí que el proyecto avance</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SUMATE ================= -->
+<section id="sumate" class="view">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Pasar a la acción</span>
+      <h2>Sumate al reclamo</h2>
+      <p>La presión que mueve una ley se construye con gente. Elegí cómo aportar: hay opciones de 30 segundos y otras más profundas.</p>
+    </div>
+
+    <div class="action-grid">
+      <div class="form-card reveal">
+        <h3 style="margin-bottom:6px">Sumá tu adhesión</h3>
+        <p style="color:var(--ink-soft);font-size:.94rem">Tu adhesión respalda que los proyectos “Alma” avancen en la Legislatura de Córdoba. <span class="note-edit">conectar a formulario / petición real</span></p>
+        <form name="adhesion" method="POST" data-netlify="true" onsubmit="return adherir(event)">
+          <input type="hidden" name="form-name" value="adhesion">
+          <div class="field"><label for="n">Nombre y apellido</label><input id="n" name="nombre" type="text" placeholder="Cómo querés que figure" required></div>
+          <div class="field"><label for="e">Email</label><input id="e" name="email" type="email" placeholder="tu@correo.com" required></div>
+          <div class="field"><label for="prv">Provincia</label><input id="prv" name="provincia" type="text" placeholder="Ej: Córdoba"></div>
+          <div class="field"><label for="msg">Mensaje (opcional)</label><textarea id="msg" name="mensaje" rows="2" placeholder="Podés contar por qué te sumás"></textarea></div>
+          <label class="check" style="margin:6px 0 16px"><input type="checkbox" required> Autorizo el uso de mi adhesión para respaldar los proyectos ante la Legislatura.</label>
+          <button class="btn primary" type="submit" style="width:100%">Sumar mi adhesión</button>
+        </form>
+      </div>
+
+      <div class="reveal">
+        <div class="way">
+          <div class="ic"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
+          <div><h4>Escribí a la Legislatura</h4><p>Un mensaje breve pidiendo tratamiento de los proyectos “Alma” pesa. Te dejamos un modelo listo para copiar. <span class="note-edit">cargar contactos / redes</span></p>
+          <button class="btn ghost sm" style="margin-top:12px" onclick="modeloMail()"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>Copiar modelo de mensaje</button></div>
+        </div>
+        <div class="way">
+          <div class="ic"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg></div>
+          <div><h4>Compartí la historia de Alma</h4><p>Cuanta más gente sepa que el test ampliado existe, más difícil es ignorarlo. Compartí este sitio con quien esté esperando un bebé.</p>
+          <button class="btn ghost sm" style="margin-top:12px" onclick="compartir()"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg>Compartir el sitio</button></div>
+        </div>
+        <div class="way">
+          <div class="ic"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><h4>Sumá información al buscador</h4><p>¿Conocés un laboratorio que hace pesquisa ampliada en tu zona, o dónde se ofrece gratis? Ayudanos a completar el mapa.</p>
+          <button class="btn ghost sm" style="margin-top:12px" onclick="contacto()">Escribirnos</button></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callbox reveal" style="margin-top:44px">
+      <p><b>No estamos solos.</b> A nivel nacional, la Federación Argentina de Enfermedades Poco Frecuentes (FADEPOF) impulsa un Grupo de Trabajo sobre Pesquisa Neonatal Ampliada. Sociedades científicas y centros de referencia vienen pidiendo lo mismo desde hace años. Lo que falta es decisión política —y voces como la tuya.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h5>Ley Alma</h5>
+        <p>Por Alma Berteli Quevedo. Para que la información llegue a tiempo y ninguna familia tenga que enterarse demasiado tarde de que el estudio existía.</p>
+      </div>
+      <div class="fcol">
+        <b>El sitio</b>
+        <button onclick="go('alma')">La historia de Alma</button>
+        <button onclick="go('epof')">AMM y EPOF</button>
+        <button onclick="go('test')">El test del talón</button>
+        <button onclick="go('donde')">Dónde hacerlo</button>
+      </div>
+      <div class="fcol">
+        <b>Actuar</b>
+        <button onclick="go('proyectos')">Los proyectos de ley</button>
+        <button onclick="go('sumate')">Sumate</button>
+        <button onclick="contacto()">Contacto</button>
+      </div>
+    </div>
+    <div class="base">
+      <span class="heart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg> Hecho con amor, en memoria de Alma.<span class="note-edit">agregar contacto, redes y dominio (¿almagalactica.com?)</span></span>
+      <span>Información general, no reemplaza el consejo médico.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* -------- ROUTER -------- */
+const views = document.querySelectorAll('section.view');
+function go(id){
+  views.forEach(v=>v.classList.toggle('active', v.id===id));
+  document.querySelectorAll('nav.links button').forEach(b=>b.classList.toggle('on', b.dataset.v===id));
+  closeMenu();
+  window.scrollTo({top:0,behavior:'auto'});
+  if(history.replaceState) history.replaceState(null,'','#'+id);
+  initReveal();
+}
+window.addEventListener('load',()=>{ const h=location.hash.replace('#',''); if(h && document.getElementById(h)) go(h); });
+
+/* -------- MENÚ MÓVIL -------- */
+function toggleMenu(){
+  const l=document.getElementById('links'), b=document.getElementById('menuBtn');
+  const open=l.classList.toggle('open'); b.classList.toggle('open',open); b.setAttribute('aria-expanded',open);
+}
+function closeMenu(){
+  const l=document.getElementById('links'), b=document.getElementById('menuBtn');
+  if(!l) return; l.classList.remove('open'); if(b){b.classList.remove('open'); b.setAttribute('aria-expanded','false');}
+}
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeMenu(); });
+document.addEventListener('click',e=>{
+  const l=document.getElementById('links'); const nav=document.querySelector('header.nav');
+  if(l && l.classList.contains('open') && nav && !nav.contains(e.target)) closeMenu();
+});
+
+/* -------- SPOT GRID -------- */
+(function(){
+  const g=document.getElementById('spotgrid'); if(!g) return;
+  const TOTAL=50, FILLED=6, AMM=17;
+  for(let i=0;i<TOTAL;i++){
+    const s=document.createElement('div'); s.className='spot';
+    if(i<FILLED){ s.style.opacity='0'; setTimeout(()=>{s.classList.add('filled');s.style.transition='opacity .5s, background .5s';s.style.opacity='1';}, 250+i*90); }
+    if(i===AMM){ s.classList.add('amm'); s.title='Acidemia Metilmalónica — hoy fuera del panel obligatorio'; }
+    g.appendChild(s);
+  }
+})();
+
+/* -------- COUNTDOWN (cuenta ASCENDENTE desde 3-dic-2025) -------- */
+const START = new Date('2025-12-03T00:00:00-03:00');
+function tick(){
+  const now=new Date(); let diff=Math.max(0, now-START);
+  const d=Math.floor(diff/86400000); diff-=d*86400000;
+  const h=Math.floor(diff/3600000); diff-=h*3600000;
+  const m=Math.floor(diff/60000); diff-=m*60000;
+  const s=Math.floor(diff/1000);
+  const p=n=>String(n).padStart(2,'0');
+  const set=(id,v)=>{const el=document.getElementById(id); if(el) el.textContent=v;};
+  set('cd-d',p(d)); set('cd-h',p(h)); set('cd-m',p(m)); set('cd-s',p(s));
+  const di=document.getElementById('cd-days-inline'); if(di) di.textContent=d;
+  const nd=document.getElementById('navDay'); if(nd) nd.textContent=d;
+}
+tick(); setInterval(tick,1000);
+
+/* -------- FINDER DATA -------- */
+const NAC = { name:'Fundación Bioquímica Argentina (FBA)', type:'priv', amm:true,
+  note:'Ofrece un panel ampliado de ~20 errores congénitos del metabolismo por espectrometría de masa en tándem (incluye Acidemia Metilmalónica). Recibe muestras en papel de filtro derivadas desde laboratorios de todo el país.',
+  meta:'Alcance nacional · fba.org.ar · Consultá costo, envío de muestra y tiempos.' };
+
+const BASIC = 'El panel básico de <b>6 enfermedades</b> es <b>gratuito y obligatorio</b> en toda maternidad pública o privada. La <b>AMM no está incluida</b>: para buscarla necesitás la pesquisa ampliada.';
+
+const PROV = {
+  'CABA':{ labs:[
+    {name:'Programa de Pesquisa Neonatal (GCBA)', type:'pub', amm:true, note:'Desde 2014, los recién nacidos en hospitales públicos de la Ciudad acceden a pesquisa ampliada (más de 20 errores del metabolismo), de forma gratuita.', meta:'Público · para nacimientos en hospitales públicos de CABA.'},
+    {name:'Hospital Garrahan — Laboratorio de Pesquisa', type:'pub', amm:false, note:'Centro de referencia del programa nacional (panel de 6). Deriva casos sospechosos a confirmación y tratamiento.', meta:'Público · referencia nacional.'},
+    NAC ]},
+  'Córdoba':{ labs:[
+    {name:'CEMECO — Hospital de Niños de la Santísima Trinidad (UNC)', type:'pub', amm:true, note:'Centro de Estudio de las Metabolopatías Congénitas: referencia en diagnóstico y seguimiento de errores congénitos del metabolismo en la región. Consultá disponibilidad de panel ampliado y derivación.', meta:'Córdoba capital · centro de referencia metabólico.'},
+    NAC ]},
+  'Santa Fe':{ labs:[
+    {name:'Laboratorios de referencia (Rosario / Santa Fe)', type:'priv', amm:true, note:'Existen laboratorios con experiencia en pesquisa neonatal que ofrecen paneles ampliados. Consultá con tu pediatra o directamente con el laboratorio.', meta:'Privado · confirmá cobertura del panel ampliado.'},
+    NAC ]}
+};
+
+const ALL_PROV = ['CABA','Buenos Aires','Catamarca','Chaco','Chubut','Córdoba','Corrientes','Entre Ríos','Formosa','Jujuy','La Pampa','La Rioja','Mendoza','Misiones','Neuquén','Río Negro','Salta','San Juan','San Luis','Santa Cruz','Santa Fe','Santiago del Estero','Tierra del Fuego','Tucumán'];
+
+(function(){
+  const sel=document.getElementById('prov'); if(!sel) return;
+  ALL_PROV.forEach(p=>{const o=document.createElement('option');o.value=p;o.textContent=p;sel.appendChild(o);});
+  sel.value='Córdoba'; renderProv();
+})();
+
+function labCard(l){
+  const pubPill = l.type==='pub' ? '<span class="pill pub">Público / gratuito</span>' : '<span class="pill priv">Privado</span>';
+  const ammPill = l.amm ? '<span class="pill amm">Detecta AMM</span>' : '';
+  return '<div class="lab"><div class="row1"><h4>'+l.name+'</h4>'+pubPill+ammPill+'</div><p>'+l.note+'</p><div class="meta">'+l.meta+'</div></div>';
+}
+
+function renderProv(){
+  const p=document.getElementById('prov').value;
+  const data=PROV[p];
+  const labs = data ? data.labs : [ NAC ];
+  const generic = !data;
+  const body=document.getElementById('finderBody');
+  body.innerHTML =
+    '<div class="prov-name">'+p+'</div>'+
+    '<div class="basic-note"><b>Lo que te corresponde gratis:</b> '+BASIC+'</div>'+
+    '<div class="finder-sub">Dónde acceder a la pesquisa ampliada</div>'+
+    labs.map(labCard).join('')+
+    (generic ? '<div class="disc">Todavía no cargamos centros específicos verificados para <b>'+p+'</b>. Mientras tanto, la opción de alcance nacional (FBA) recibe muestras derivadas. Si conocés un laboratorio o programa público en '+p+', <a href="#" onclick="go(\'sumate\');return false;">ayudanos a sumarlo</a>.</div>' : '');
+}
+
+/* -------- ACTIONS -------- */
+function adherir(e){
+  e.preventDefault();
+  const n=document.getElementById('n').value.trim();
+  alert('¡Gracias'+(n?', '+n:'')+'! Tu adhesión quedó registrada.\n\n(Para que se envíe de verdad, conectá este formulario a Netlify Forms, Google Forms o una petición en línea. Ver notas al final.)');
+  e.target.reset();
+  return false;
+}
+function modeloMail(){
+  const t="Estimadas/os legisladoras/es:\n\nMe dirijo a ustedes para pedir que se dé tratamiento a los proyectos de ley \"Alma\" sobre pesquisa neonatal ampliada. La detección temprana de enfermedades metabólicas tratables, como la Acidemia Metilmalónica, puede evitar secuelas irreversibles y muertes. Informar a las familias y ampliar el panel es un derecho y una inversión en salud.\n\nSolicito que el proyecto avance. Gracias.\n\n[Tu nombre] — [Tu localidad]";
+  copiar(t, 'Modelo de mensaje copiado. Pegalo en tu correo o red y enviálo a tus representantes.');
+}
+function compartir(){
+  const url=location.href.split('#')[0];
+  if(navigator.share){ navigator.share({title:'Ley Alma — pesquisa neonatal ampliada', text:'Alma nació sana. Su enfermedad era detectable al nacer. Conocé por qué hay que ampliar el test del talón.', url:url}).catch(function(){}); }
+  else copiar(url,'Enlace copiado. Compartilo con quien esté esperando un bebé.');
+}
+function contacto(){
+  alert('Escribinos para sumar información o contarnos tu caso.\n\n(Cargá acá el email o las redes de la familia. Ver notas al final.)');
+}
+function copiar(text,msg){
+  if(navigator.clipboard){ navigator.clipboard.writeText(text).then(function(){alert(msg);}).catch(function(){prompt('Copiá el texto:',text);}); }
+  else prompt('Copiá el texto:',text);
+}
+
+/* -------- REVEAL ON SCROLL -------- */
+let io;
+function initReveal(){
+  const els=document.querySelectorAll('section.view.active .reveal:not(.in)');
+  if(!('IntersectionObserver' in window)){ els.forEach(e=>e.classList.add('in')); return; }
+  if(!io) io=new IntersectionObserver((ent)=>{ent.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(e=>io.observe(e));
+}
+initReveal();
+</script>
+</body>
+</html>
