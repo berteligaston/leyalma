@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ley Alma — Por una pesquisa neonatal ampliada en Argentina</title>
 <meta name="description" content="Alma nació sana. Tenía una enfermedad detectable al nacer con la pesquisa neonatal ampliada, pero nadie nos dijo que ese estudio existía. Trabajamos para que ninguna familia vuelva a pasar por lo mismo.">
-<meta name="theme-color" content="#FAF4EE">
+<meta name="theme-color" content="#FBF6F1">
 <!-- Compartir en redes -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_AR">
@@ -13,25 +13,25 @@
 <meta property="og:description" content="Por qué hay que ampliar el test del talón en Argentina, y dónde hacerlo hoy. En memoria de Alma Berteli Quevedo.">
 <!-- og:image: agregar una imagen 1200x630 (foto de Alma o placa) cuando esté el dominio -->
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='18' fill='none' stroke='%23C0405F' stroke-width='3'/%3E%3Ccircle cx='20' cy='20' r='9' fill='%23C0405F'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='18' fill='none' stroke='%23C43350' stroke-width='3'/%3E%3Ccircle cx='20' cy='20' r='9' fill='%23C43350'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Hanken+Grotesk:ital,wght@0,400..700;1,400..500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#FAF4EE;     /* marfil cálido */
-    --paper-2:#F1E7DD;   /* arena para paneles */
-    --ink:#251F2B;       /* tinta ciruela profunda */
-    --ink-soft:#5F5566;
-    --line:#E5D8CC;
-    --rose:#C0405F;      /* la gota — vida, tibieza */
-    --rose-deep:#8A2F49;
-    --rose-wash:#F6E6E9;
-    --sea:#47507A;       /* índigo/pizarra — información, futuro, noche */
-    --sea-deep:#313860;
-    --sea-wash:#E9EAF2;
-    --gold:#B5893C;      /* oro/estrella, sólo decorativo */
-    --shadow:0 1px 2px rgba(37,31,43,.06), 0 12px 34px -18px rgba(138,47,73,.30);
+    --paper:#FBF6F1;     /* marfil cálido, más limpio */
+    --paper-2:#F0E6DC;   /* arena para paneles */
+    --ink:#23202A;       /* tinta ciruela profunda */
+    --ink-soft:#574F5C;
+    --line:#E6D9CD;
+    --rose:#C43350;      /* la gota — vida, sangre, tibieza */
+    --rose-deep:#8E2438;
+    --rose-wash:#FBE8EC;
+    --sea:#2F6D74;       /* verde petróleo — información, futuro, calma */
+    --sea-deep:#1E4E54;
+    --sea-wash:#E2F0F0;
+    --gold:#A9782F;      /* oro/estrella, sólo decorativo */
+    --shadow:0 1px 2px rgba(35,32,42,.06), 0 12px 34px -18px rgba(142,36,56,.30);
     --maxw:1080px;
   }
   *{box-sizing:border-box}
@@ -71,12 +71,12 @@
   .spotrule i.mid{width:11px;height:11px;background:var(--rose);box-shadow:inset 0 -1px 2px rgba(143,54,81,.4)}
 
   /* ---------- NAV ---------- */
-  header.nav{position:sticky;top:0;z-index:50;background:rgba(250,244,238,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(251,246,241,.92);backdrop-filter:blur(14px) saturate(1.2);border-bottom:1.5px solid var(--line);box-shadow:0 1px 0 rgba(35,32,42,.03),0 6px 24px -20px rgba(35,32,42,.5)}
   .nav-in{display:flex;align-items:center;gap:14px;height:68px;max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,5vw,40px)}
   .brand{display:flex;align-items:center;gap:11px;cursor:pointer;background:none;border:0;padding:0;font:inherit;color:var(--ink);margin-right:auto}
   .brand .mark{width:27px;height:27px;flex:none;transition:transform .3s}
   .brand:hover .mark{transform:rotate(-8deg) scale(1.06)}
-  .brand b{font-family:"Fraunces",serif;font-weight:500;font-size:1.3rem;letter-spacing:-.01em}
+  .brand b{font-family:"Fraunces",serif;font-weight:600;font-size:1.34rem;letter-spacing:-.01em}
   .brand small{font-family:"Space Mono",monospace;font-size:.58rem;letter-spacing:.2em;color:var(--sea-deep);text-transform:uppercase;display:block;margin-top:-3px;font-weight:400}
 
   /* chip vivo de días */
@@ -88,14 +88,14 @@
   @media (prefers-reduced-motion: reduce){.day-chip .dot{animation:none}}
 
   nav.links{display:flex;gap:2px;align-items:center}
-  nav.links button{position:relative;background:none;border:0;font:inherit;font-size:.92rem;color:var(--ink-soft);padding:9px 13px;border-radius:8px;cursor:pointer;transition:color .18s}
-  nav.links button:not(.nav-cta):hover{color:var(--ink)}
-  nav.links button:not(.nav-cta)::after{content:"";position:absolute;left:13px;right:13px;bottom:3px;height:2px;border-radius:2px;background:var(--rose);transform:scaleX(0);transition:transform .25s ease}
-  nav.links button:not(.nav-cta):hover::after{transform:scaleX(.5)}
-  nav.links button.on:not(.nav-cta){color:var(--rose-deep);font-weight:600}
+  nav.links button{position:relative;background:none;border:0;font:inherit;font-size:.95rem;font-weight:600;color:var(--ink);padding:10px 12px;border-radius:9px;cursor:pointer;white-space:nowrap;transition:color .18s,background .18s}
+  nav.links button:not(.nav-cta):hover{color:var(--rose-deep);background:var(--rose-wash)}
+  nav.links button:not(.nav-cta)::after{content:"";position:absolute;left:14px;right:14px;bottom:4px;height:2.5px;border-radius:2px;background:var(--rose);transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+  nav.links button:not(.nav-cta):hover::after{transform:scaleX(.55)}
+  nav.links button.on:not(.nav-cta){color:var(--rose-deep);font-weight:700}
   nav.links button.on:not(.nav-cta)::after{transform:scaleX(1)}
-  .nav-cta{background:var(--rose);color:#fff;font-weight:600;padding:9px 20px;border-radius:100px;margin-left:8px;box-shadow:var(--shadow);transition:.2s}
-  .nav-cta:hover{background:var(--rose-deep);transform:translateY(-1px)}
+  .nav-cta{background:var(--rose);color:#fff;font-weight:700;letter-spacing:.01em;padding:11px 24px;border-radius:100px;margin-left:10px;box-shadow:0 2px 8px -2px rgba(142,36,56,.5),0 8px 22px -12px rgba(142,36,56,.6);transition:.2s}
+  .nav-cta:hover{background:var(--rose-deep);transform:translateY(-1px);box-shadow:0 4px 14px -2px rgba(142,36,56,.55)}
   .nav-cta.on{background:var(--rose-deep)}
 
   /* hamburguesa animada */
@@ -132,7 +132,8 @@
   .btn-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
 
   /* ---------- HERO ---------- */
-  .hero{padding:clamp(48px,7vw,88px) 0 clamp(40px,6vw,70px)}
+  #inicio.view{padding-top:clamp(24px,4vw,48px)}
+  .hero{padding-top:0;padding-bottom:clamp(36px,5vw,60px)}
   .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(30px,5vw,64px);align-items:center}
   @media(max-width:820px){.hero-grid{grid-template-columns:1fr}}
   .hero h1{font-size:clamp(2.6rem,7vw,4.9rem);font-weight:300;letter-spacing:-.028em;line-height:1.02}
@@ -147,13 +148,13 @@
   .spotgrid{display:grid;grid-template-columns:repeat(10,1fr);gap:9px}
   @media(max-width:820px){.spotgrid{grid-template-columns:repeat(12,1fr);gap:7px}}
   .spot{aspect-ratio:1;border-radius:50%;border:1.5px solid var(--line);background:var(--paper-2);position:relative;transition:.5s}
-  .spot.filled{background:radial-gradient(circle at 38% 34%, #d76a82, var(--rose) 62%);border-color:var(--rose-deep);box-shadow:inset 0 -2px 4px rgba(143,54,81,.35)}
+  .spot.filled{background:radial-gradient(circle at 38% 34%, #DB5E76, var(--rose) 62%);border-color:var(--rose-deep);box-shadow:inset 0 -2px 4px rgba(142,36,56,.35)}
   .spot.amm{border:1.6px dashed var(--rose);background:var(--rose-wash);animation:pulse 2.4s ease-in-out infinite}
-  @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(194,76,103,.35)}50%{box-shadow:0 0 0 5px rgba(194,76,103,0)}}
+  @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(196,51,80,.35)}50%{box-shadow:0 0 0 5px rgba(196,51,80,0)}}
   @media (prefers-reduced-motion: reduce){.spot.amm{animation:none}}
   .card-spot .legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:18px;font-size:.82rem;color:var(--ink-soft)}
   .card-spot .legend i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:6px;vertical-align:-1px}
-  .amm-callout{margin-top:14px;background:var(--rose-wash);border:1px solid #eecdd4;border-radius:12px;padding:11px 14px;font-size:.86rem;line-height:1.5}
+  .amm-callout{margin-top:14px;background:var(--rose-wash);border:1px solid #F4CDD7;border-radius:12px;padding:11px 14px;font-size:.86rem;line-height:1.5}
   .amm-callout b{color:var(--rose-deep)}
 
   /* ---------- STAT STRIP ---------- */
@@ -181,8 +182,8 @@
   .tile h3{font-size:1.24rem;margin:8px 0 8px}
   .tile p{font-size:.94rem;color:var(--ink-soft);margin:0}
 
-  .callbox{background:var(--sea-wash);border:1px solid #cfe0e2;border-left:4px solid var(--sea);border-radius:12px;padding:20px 22px;margin:26px 0}
-  .callbox.rose{background:var(--rose-wash);border-color:#eecdd4;border-left-color:var(--rose)}
+  .callbox{background:var(--sea-wash);border:1px solid #CBE3E3;border-left:4px solid var(--sea);border-radius:12px;padding:20px 22px;margin:26px 0}
+  .callbox.rose{background:var(--rose-wash);border-color:#F4CDD7;border-left-color:var(--rose)}
   .callbox p:last-child{margin-bottom:0}
 
   /* ---------- TIMELINE ---------- */
@@ -197,7 +198,7 @@
 
   /* ---------- COUNTDOWN ---------- */
   .counter-wrap{background:var(--ink);color:#fff;border-radius:22px;padding:clamp(30px,5vw,48px);text-align:center;position:relative;overflow:hidden}
-  .counter-wrap::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% -10%, rgba(194,76,103,.35), transparent 55%);pointer-events:none}
+  .counter-wrap::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% -10%, rgba(196,51,80,.38), transparent 55%);pointer-events:none}
   .counter-wrap .eyebrow{color:#e9b7c2;position:relative}
   .counter-wrap h2{color:#fff;margin:10px 0 6px;position:relative;font-weight:300}
   .clock{display:flex;justify-content:center;gap:clamp(10px,3vw,26px);margin:26px 0 8px;position:relative;flex-wrap:wrap}
@@ -285,9 +286,9 @@
   <div class="nav-in">
     <button class="brand" onclick="go('inicio')" aria-label="Ir al inicio">
       <svg class="mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-        <circle cx="20" cy="20" r="18" stroke="#C0405F" stroke-width="2"/>
+        <circle cx="20" cy="20" r="18" stroke="#C43350" stroke-width="2"/>
         <circle cx="20" cy="20" r="9" fill="url(#g)"/>
-        <defs><radialGradient id="g" cx="0.38" cy="0.34" r="0.8"><stop stop-color="#d76a82"/><stop offset="1" stop-color="#C0405F"/></radialGradient></defs>
+        <defs><radialGradient id="g" cx="0.38" cy="0.34" r="0.8"><stop stop-color="#DB5E76"/><stop offset="1" stop-color="#C43350"/></radialGradient></defs>
       </svg>
       <span style="text-align:left"><b>Ley Alma</b><small>Pesquisa neonatal ampliada</small></span>
     </button>
@@ -318,7 +319,7 @@
       <div>
         <p class="eyebrow">En memoria de Alma Berteli Quevedo</p>
         <h1 style="margin-top:16px">Alma nació sana.<br>Su enfermedad era <em>detectable al nacer.</em></h1>
-        <p class="lede">Tenía una enfermedad metabólica que hoy puede encontrarse con una gota de sangre. Nadie nos dijo que ese estudio existía. Cuando llegó el diagnóstico, ya era tarde.</p>
+        <p class="lede">Tenía una enfermedad metabólica que hoy puede encontrarse con una gota de sangre, mediante el test del talón. Nadie nos dijo que ese estudio existía. Cuando llegó el diagnóstico, ya era tarde.</p>
         <div class="btn-row">
           <button class="btn primary" onclick="go('sumate')">Sumate al reclamo
             <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
@@ -424,7 +425,7 @@
       <div class="tl-item key">
         <div class="when">14 de agosto · 62 días de vida</div>
         <h4>La sospecha correcta, por fin</h4>
-        <p>El equipo de metabolismo, con el Dr. Norberto Guelbert, detectó un perfil alterado (C4 elevado) y homocisteína extremadamente alta (~400). Diagnóstico probable: Acidemia Metilmalónica tipo cblC. Esa misma tarde se inició tratamiento específico: vitamina B12 en altas dosis, carnitina, biotina y fórmula especial.</p>
+        <p>El equipo de metabolismo detectó un perfil alterado (C4 elevado) y homocisteína extremadamente alta (~400). Diagnóstico probable: Acidemia Metilmalónica tipo cblC. Esa misma tarde se inició tratamiento específico: vitamina B12 en altas dosis, carnitina, biotina y fórmula especial.</p>
       </div>
       <div class="tl-item">
         <div class="when">Respuesta</div>
@@ -444,7 +445,7 @@
     </div>
 
     <div class="callbox reveal" style="margin-top:40px">
-      <p>Los tres médicos principales del caso —Dr. Luis Ahumada, Dra. Mirta Ferreyra y Dr. Norberto Guelbert— coincidieron en que una detección temprana le habría dado a Alma una mejor oportunidad. El equipo la sostuvo con vida y buscó respuestas hasta agotar todas las vías. Lo que faltó no estuvo en la sala: faltó antes, en la información y en el acceso.</p>
+      <p>Los médicos que la atendieron coincidieron en que una detección temprana le habría dado a Alma una mejor oportunidad. El equipo la sostuvo con vida y buscó respuestas hasta agotar todas las vías. Lo que faltó no estuvo en la sala: faltó antes, en la información y en el acceso.</p>
     </div>
 
     <div class="btn-row reveal">
@@ -464,22 +465,37 @@
     </div>
 
     <div class="prose narrow reveal">
-      <h3>¿Qué es la Acidemia Metilmalónica cblC?</h3>
-      <p>Es un error congénito del metabolismo: el cuerpo no procesa bien ciertas proteínas y la vitamina B12. En el tipo <b>cblC</b> se afecta el metabolismo de la cobalamina (B12), y se acumulan sustancias tóxicas mientras se eleva un marcador llamado <b>homocisteína</b>. Es de herencia autosómica recesiva: hacen falta dos variantes del gen <b>MMACHC</b>, una de cada progenitor, que pueden ser portadores sanos y no tener ningún síntoma.</p>
-      <p>Sin tratamiento temprano, el daño avanza sobre el riñón, la sangre y el sistema nervioso. Con detección precoz, en cambio, existe tratamiento: vitamina B12 en altas dosis (hidroxocobalamina), carnitina, betaína y una fórmula especial. La diferencia entre un desenlace y otro suele ser el <b>tiempo</b>.</p>
+      <h3>¿Qué es la Acidemia Metilmalónica?</h3>
+      <p>Es un <b>error congénito del metabolismo</b>: una falla, presente desde el nacimiento, en la maquinaria química que el cuerpo usa para convertir los alimentos en energía. En la AMM, el organismo no logra procesar del todo ciertos aminoácidos —los “ladrillos” de las proteínas— ni algunas grasas. Como resultado se acumula en la sangre una sustancia tóxica, el <b>ácido metilmalónico</b>, que en cantidades altas daña órganos vitales.</p>
+      <p>Es de <b>herencia autosómica recesiva</b>: hacen falta dos copias alteradas del mismo gen, una heredada de cada progenitor. Los padres suelen ser <b>portadores sanos</b>, sin ningún síntoma, y por eso la mayoría de las familias se entera recién cuando nace un hijo afectado. En cada embarazo de una pareja portadora, el riesgo de que el bebé tenga la enfermedad es de <b>1 en 4</b>.</p>
+
+      <h3>No es una sola enfermedad: las formas de la AMM</h3>
+      <p>Bajo el nombre “acidemia metilmalónica” se agrupan en realidad <b>varias enfermedades distintas</b>, según en qué punto exacto de la cadena metabólica está la falla. Distinguirlas importa, porque cambian el pronóstico, el tratamiento y hasta la respuesta a la vitamina B12. A grandes rasgos se dividen en dos grupos: las que elevan <b>solo</b> el ácido metilmalónico (formas “aisladas”) y las que elevan además la <b>homocisteína</b> (formas “combinadas”).</p>
+    </div>
+
+    <div class="cards reveal" style="margin-top:26px">
+      <div class="tile"><div class="n">Aislada · forma “mut”</div><h3>Falla la enzima</h3><p>La enzima metilmalonil-CoA mutasa (gen <b>MMUT</b>) no funciona, o funciona muy poco (variantes mut⁰ y mut⁻). Suele ser una de las formas más severas y responde menos a la vitamina B12.</p></div>
+      <div class="tile"><div class="n">Aislada · cblA / cblB</div><h3>Falta el cofactor</h3><p>La enzima está, pero le falta su “ayudante”: la adenosilcobalamina, que deriva de la B12 (genes <b>MMAA</b> y <b>MMAB</b>). Buena parte de estos casos mejora con B12 en altas dosis.</p></div>
+      <div class="tile"><div class="n">Combinada · cblC</div><h3>La forma de Alma</h3><p>La más frecuente (gen <b>MMACHC</b>). La B12 no se transforma en ninguna de sus dos formas activas, así que suben a la vez el ácido metilmalónico y la <b>homocisteína</b>. Compromete riñón, sangre, ojos y sistema nervioso.</p></div>
+      <div class="tile"><div class="n">Combinada · cblD / cblF / cblJ</div><h3>Formas más raras</h3><p>Comparten el mecanismo de la cblC —se elevan los dos marcadores— pero son mucho menos frecuentes y con presentaciones más variables, a veces de aparición más tardía.</p></div>
+    </div>
+
+    <div class="prose narrow reveal">
+      <p style="margin-top:30px">Frente a este panorama, el tratamiento se adapta a cada forma, pero comparte una base: <b>vitamina B12 en altas dosis</b> (hidroxocobalamina), <b>carnitina</b> para ayudar a eliminar lo tóxico, <b>betaína</b> en las formas combinadas para bajar la homocisteína, y una <b>dieta especial</b> con fórmulas médicas que limitan las proteínas que el cuerpo no puede procesar. Sin tratamiento temprano, el daño avanza sobre el riñón, la sangre, los ojos y el sistema nervioso. Con detección precoz, en cambio, muchos chicos crecen y se desarrollan. La diferencia entre un desenlace y otro suele ser el <b>tiempo</b>.</p>
 
       <div class="callbox rose">
-        <p><b>El punto clave.</b> La AMM está entre las enfermedades que <b>sí</b> detecta la pesquisa neonatal ampliada por espectrometría de masa en tándem (MS/MS). No está en el panel obligatorio de 6 enfermedades. Ese vacío es exactamente lo que buscamos cerrar.</p>
+        <p><b>El punto clave.</b> La AMM —en todas sus formas— está entre las enfermedades que <b>sí</b> detecta la pesquisa neonatal ampliada por espectrometría de masa en tándem (MS/MS). <b>No está</b> en el panel obligatorio de 6 enfermedades. Ese vacío es exactamente lo que buscamos cerrar.</p>
       </div>
 
       <h3>¿Y qué son las EPOF?</h3>
-      <p>Las <b>enfermedades poco frecuentes</b> (EPOF, también llamadas “raras”) son las que afectan a un número reducido de personas. Individualmente son infrecuentes; en conjunto, no tanto. La mayoría son de origen genético y buena parte se manifiesta al nacer o en la infancia. Muchas son graves, pero varias son <b>tratables si se detectan a tiempo</b>.</p>
-      <p>Por eso la pesquisa neonatal es una de las herramientas de salud pública más costo-efectivas que existen: una gota de sangre puede evitar años de internaciones, secuelas irreversibles o una muerte evitable.</p>
+      <p>Las <b>enfermedades poco frecuentes</b> (EPOF, también llamadas “raras”) son las que afectan a un número reducido de personas. En la Argentina, la <b>Ley 26.689</b> las define como aquellas cuya prevalencia es <b>igual o menor a 1 caso cada 2.000 habitantes</b>. Individualmente son infrecuentes; en conjunto, no tanto.</p>
+      <p>Se estima que existen <b>entre 6.000 y 8.000 EPOF</b> diferentes. Alrededor del <b>70%</b> son de origen genético y buena parte se manifiesta al nacer o en la infancia. Sumadas, se calcula que afectan a cerca del <b>6% a 8% de la población</b> a lo largo de la vida: no es un problema de unos pocos. Muchas son graves, pero varias son <b>tratables si se detectan a tiempo</b>.</p>
+      <p>Por eso la pesquisa neonatal es una de las herramientas de salud pública más <b>costo-efectivas</b> que existen: una gota de sangre puede evitar años de internaciones, secuelas irreversibles o una muerte evitable.</p>
     </div>
 
     <div class="cards reveal" style="margin-top:44px">
-      <div class="tile"><div class="n">Herencia</div><h3>Recesiva</h3><p>Dos padres sanos pueden ser portadores sin saberlo. Cada embarazo tiene un riesgo. Saberlo también protege a la familia a futuro.</p></div>
-      <div class="tile"><div class="n">Detección</div><h3>Una gota de sangre</h3><p>La misma muestra del talón, analizada con MS/MS, alcanza para buscar decenas de enfermedades a la vez.</p></div>
+      <div class="tile"><div class="n">Herencia</div><h3>Recesiva</h3><p>Dos padres sanos pueden ser portadores sin saberlo. Cada embarazo de la pareja tiene un riesgo de 1 en 4. Detectarla también protege a la familia a futuro.</p></div>
+      <div class="tile"><div class="n">Detección</div><h3>Una gota de sangre</h3><p>La misma muestra del talón, analizada con MS/MS, alcanza para buscar decenas de enfermedades a la vez, sin un pinchazo extra.</p></div>
       <div class="tile"><div class="n">Tratamiento</div><h3>Existe</h3><p>Para muchas EPOF metabólicas hay tratamiento. Lo que decide el pronóstico es empezar antes de que el daño se instale.</p></div>
     </div>
 
@@ -499,7 +515,15 @@
     </div>
 
     <div class="narrow prose reveal">
-      <p>La <b>Ley Nacional 26.279</b> (2007) hace obligatoria la pesquisa neonatal en toda maternidad, pública o privada. En la práctica, el tamiz metabólico de la gotita del talón busca hoy <b>6 enfermedades</b>: hipotiroidismo congénito, fenilcetonuria, fibrosis quística, galactosemia, hiperplasia suprarrenal congénita y deficiencia de biotinidasa. La ley previó incorporar más condiciones “cuando esté científicamente justificado”, pero el panel <b>quedó estancado</b>.</p>
+      <h3 style="margin-top:0">¿Qué es exactamente?</h3>
+      <p>Es un análisis muy simple para el bebé: se toman <b>unas gotas de sangre del talón</b> —de ahí el nombre— sobre un papel de filtro especial (la “tarjeta de Guthrie”). Lo ideal es hacerlo <b>entre las 48 horas y el 5.º día de vida</b>, cuando el recién nacido ya empezó a alimentarse: recién entonces ciertas sustancias se vuelven detectables. La tarjeta se deja secar y viaja a un laboratorio de pesquisa, que analiza la muestra y devuelve el resultado.</p>
+      <p>Con esa única gota se buscan enfermedades que <b>no dan síntomas al nacer</b> pero que, si no se tratan a tiempo, provocan daños graves e irreversibles. La idea es sencilla y poderosa: encontrarlas <b>antes</b> de que aparezca el primer síntoma.</p>
+
+      <h3>Qué dice la ley, y dónde se estancó</h3>
+      <p>La <b>Ley Nacional 26.279</b> (2007) hace obligatoria la pesquisa neonatal en toda maternidad, pública o privada. En la práctica, el tamiz metabólico de la gota del talón busca hoy <b>6 enfermedades</b>: hipotiroidismo congénito, fenilcetonuria, fibrosis quística, galactosemia, hiperplasia suprarrenal congénita y deficiencia de biotinidasa. La misma ley obliga además a detectar otras condiciones del recién nacido —como la retinopatía del prematuro, el Chagas y la sífilis congénita—, y previó incorporar más enfermedades “cuando esté científicamente justificado”. Pero ese panel metabólico <b>quedó estancado en 6</b>.</p>
+
+      <h3>¿Cómo puede una gota buscar tantas enfermedades?</h3>
+      <p>La clave es una tecnología llamada <b>espectrometría de masa en tándem</b> (MS/MS). En vez de hacer un análisis distinto para cada enfermedad, el equipo mide de una sola vez <b>decenas de sustancias</b> (aminoácidos y acilcarnitinas) presentes en la misma gota. Cuando alguna aparece en niveles anormales, ese patrón enciende una alerta. Así, con la muestra que ya se toma hoy, se pueden rastrear a la vez muchos errores congénitos del metabolismo —incluida la Acidemia Metilmalónica— <b>sin un pinchazo adicional</b>.</p>
     </div>
 
     <div class="callbox reveal">
@@ -507,12 +531,59 @@
       <p style="margin-top:10px"><b>Pesquisa ampliada (MS/MS):</b> suma decenas de errores congénitos del metabolismo —aminoacidopatías, acidemias orgánicas, defectos de la β-oxidación y del ciclo de la urea— incluida la <b>Acidemia Metilmalónica</b>. Hoy se ofrece sobre todo de forma privada, salvo excepciones públicas.</p>
     </div>
 
-    <h3 class="reveal" style="margin-top:46px">Cómo se compara Argentina con el mundo</h3>
+    <div class="narrow prose reveal">
+      <div class="callbox rose" style="margin-top:26px">
+        <p><b>Un resultado alterado no es un diagnóstico.</b> La pesquisa es un <b>tamiz</b>: separa a los bebés que necesitan estudiarse mejor. Un valor fuera de rango es una <b>alerta</b> que obliga a confirmar rápido con estudios específicos y, si hace falta, empezar tratamiento. Por eso también importan los <b>tiempos</b>: de nada sirve detectar si el resultado y la derivación llegan tarde.</p>
+      </div>
+    </div>
+
+    <h3 class="reveal" style="margin-top:52px">De 0 a 6: cómo se armó el panel argentino</h3>
+    <p class="reveal" style="max-width:66ch;color:var(--ink-soft);margin-top:12px">La lista obligatoria no nació completa. Se construyó de a poco, ley por ley, entre 1986 y 2007. Y después se frenó.</p>
+    <div class="timeline reveal" style="margin-top:26px;max-width:720px">
+      <div class="tl-item">
+        <div class="when">1986 · Ley 23.413</div>
+        <h4>Empieza con 1: fenilcetonuria</h4>
+        <p>La primera ley nacional hace obligatoria la pesquisa de fenilcetonuria (PKU) en todo recién nacido.</p>
+      </div>
+      <div class="tl-item">
+        <div class="when">1990 · Ley 23.874</div>
+        <h4>Se suma el hipotiroidismo congénito</h4>
+        <p>Entra al tamiz una de las causas prevenibles más importantes de discapacidad intelectual. Van 2.</p>
+      </div>
+      <div class="tl-item">
+        <div class="when">1994 · Ley 24.438</div>
+        <h4>Se suma la fibrosis quística</h4>
+        <p>El panel obligatorio llega a 3 enfermedades.</p>
+      </div>
+      <div class="tl-item key">
+        <div class="when">2007 · Ley 26.279</div>
+        <h4>Salto a 6 — la foto que sigue vigente</h4>
+        <p>La ley actual ordena y amplía el programa: suma galactosemia, hiperplasia suprarrenal congénita y deficiencia de biotinidasa. Además incorpora la detección de retinopatía del prematuro, Chagas y sífilis congénita.</p>
+      </div>
+      <div class="tl-item">
+        <div class="when">2007 → hoy</div>
+        <h4>Casi dos décadas sin sumar una sola enfermedad más</h4>
+        <p>La misma ley previó incorporar nuevas condiciones “cuando esté científicamente justificado”. Desde entonces, el panel metabólico no se movió de 6.</p>
+      </div>
+    </div>
+
+    <h3 class="reveal" style="margin-top:52px">Cómo se compara Argentina con el mundo</h3>
     <div class="cards reveal" style="margin-top:22px">
       <div class="tile"><div class="n">Argentina</div><h3>6 enfermedades</h3><p>Panel nacional obligatorio. Algunas jurisdicciones suman alguna condición extra; CABA hace pesquisa ampliada en hospitales públicos desde 2014.</p></div>
       <div class="tile"><div class="n">EE. UU. (RUSP)</div><h3>35 esenciales</h3><p>El panel uniforme recomendado incluye numerosas acidemias y aminoacidopatías, entre ellas la metilmalónica y la propiónica.</p></div>
       <div class="tile"><div class="n">Madrid, España</div><h3>~23 enfermedades</h3><p>Cribado ampliado que suma MSUD, tirosinemia, MCADD, VLCAD, AMM en varias formas, homocistinuria, SCID, AME y más.</p></div>
       <div class="tile"><div class="n">Tendencia global</div><h3>Ampliar</h3><p>La evidencia internacional respalda incorporar de forma gradual enfermedades metabólicas y genéticas tratables.</p></div>
+    </div>
+
+    <h3 class="reveal" style="margin-top:52px">Y frente a nuestros vecinos, ¿cómo estamos?</h3>
+    <p class="reveal" style="max-width:66ch;color:var(--ink-soft);margin-top:12px">No estamos a la vanguardia. En los últimos años varios países limítrofes ampliaron con fuerza su tamiz, mientras Argentina siguió en 6.</p>
+    <div class="cards reveal" style="margin-top:22px">
+      <div class="tile"><div class="n">Argentina</div><h3>6</h3><p>Panel obligatorio, sin cambios desde 2007. Es el punto de partida de esta comparación.</p></div>
+      <div class="tile"><div class="n">Brasil</div><h3>Hasta 50</h3><p>La ley 14.154 (2021) ordena ampliar el “teste do pezinho” del sistema público a unas 50 enfermedades, de forma escalonada en 5 etapas.</p></div>
+      <div class="tile"><div class="n">Chile</div><h3>2 → 26</h3><p>Pasó de detectar solo 2 (hipotiroidismo y fenilcetonuria) a 26 enfermedades, con cobertura universal desde 2025.</p></div>
+      <div class="tile"><div class="n">Uruguay</div><h3>4 + audición</h3><p>Tamiz obligatorio de 4 enfermedades más hipoacusia, con pesquisa ampliada por MS/MS en marcha para sumar alrededor de 20 más.</p></div>
+      <div class="tile"><div class="n">Paraguay</div><h3>Panel acotado</h3><p>Programa nacional centrado sobre todo en hipotiroidismo congénito, fenilcetonuria y fibrosis quística.</p></div>
+      <div class="tile"><div class="n">Bolivia</div><h3>En expansión</h3><p>Tamiz enfocado en el hipotiroidismo congénito, con la cobertura todavía creciendo hacia todo el país.</p></div>
     </div>
 
     <div class="callbox rose reveal" style="margin-top:40px">
@@ -576,30 +647,38 @@
       <p class="counter-sub">El 3 de diciembre de 2025 tuvimos el primer contacto formal con la Legislatura de Córdoba. Este reloj corre desde entonces. Sigue corriendo porque el proyecto todavía no avanza.</p>
     </div>
 
-    <div class="bill a reveal" style="margin-top:40px">
+    <p class="lead-serif reveal" style="margin-top:44px">Son <b>dos caminos complementarios</b>, no excluyentes. El Borrador A asegura que la información llegue ya, con costo casi nulo. El Borrador B convierte la detección temprana en un derecho garantizado. Se pueden tomar por separado o combinados.</p>
+
+    <div class="bill a reveal" style="margin-top:34px">
       <span class="tag">Borrador A · Camino informativo</span>
       <h3>Programa de Pesquisa Neonatal Ampliada Voluntaria</h3>
-      <p style="color:var(--ink-soft)">Garantiza el <b>derecho a la información</b> y facilita el acceso voluntario al panel ampliado, con impacto presupuestario mínimo. Nadie queda obligado: se informa y se ordena el circuito.</p>
+      <p style="color:var(--ink-soft)"><b>El problema.</b> Hoy muchísimas familias ni siquiera saben que la pesquisa ampliada existe. No es, en primer lugar, un tema de dinero: es un tema de <b>información que no circula</b>. Eso fue exactamente lo que le pasó a Alma.</p>
+      <p style="color:var(--ink-soft)"><b>Qué propone.</b> Garantizar el <b>derecho a la información</b> y ordenar el circuito para que quien quiera acceder al panel ampliado pueda hacerlo. Con impacto presupuestario mínimo y sin obligar a nadie: se informa, se registra y se acompaña.</p>
       <ul>
-        <li>Folleto oficial y afiches obligatorios en maternidades, clínicas y consultorios de obstetricia, explicando qué cubre el panel básico y qué es el ampliado.</li>
-        <li>Constancia en la historia clínica de que la información fue entregada a la familia.</li>
-        <li>Registro provincial de laboratorios habilitados, con control de calidad y trazabilidad.</li>
-        <li>Circuito de confirmación y derivación inmediata ante un resultado sospechoso.</li>
+        <li>Folleto oficial y afiches <b>obligatorios</b> en maternidades, clínicas y consultorios de obstetricia, que expliquen en lenguaje claro qué cubre el panel básico gratuito y qué agrega el ampliado.</li>
+        <li>Que esa información se entregue <b>durante el embarazo</b>, no recién en el parto, para que la familia pueda decidir con tiempo.</li>
+        <li><b>Constancia en la historia clínica</b> de que la información fue efectivamente entregada.</li>
+        <li>Registro provincial de <b>laboratorios habilitados</b>, con control de calidad y trazabilidad de las muestras.</li>
+        <li>Circuito de <b>confirmación y derivación inmediata</b> ante un resultado sospechoso, con tiempos definidos.</li>
         <li>Capacitación breve para obstetras, neonatólogos y pediatras.</li>
       </ul>
+      <p style="color:var(--ink-soft);margin:16px 0 0"><b>Por qué este camino.</b> Es el <b>piso mínimo</b> y el más fácil de aprobar: casi no cuesta, no obliga a nadie y corrige la falla más urgente —que la información llegue a tiempo—. Se puede votar ya.</p>
     </div>
 
     <div class="bill b reveal">
       <span class="tag">Borrador B · Camino obligatorio</span>
       <h3>Ampliación del panel obligatorio: de 6 a 20 enfermedades</h3>
-      <p style="color:var(--ink-soft)">Amplía el tamiz obligatorio con inclusión <b>expresa de la Acidemia Metilmalónica</b> y crea una comisión técnica que actualiza la lista con evidencia.</p>
+      <p style="color:var(--ink-soft)"><b>El problema.</b> Mientras la detección dependa de que cada familia se entere por su cuenta y pueda pagarla, la salud del bebé queda librada a la <b>suerte y al bolsillo</b>. La única forma de que sea un derecho igual para todos es que el Estado lo garantice.</p>
+      <p style="color:var(--ink-soft)"><b>Qué propone.</b> Ampliar el tamiz <b>obligatorio y gratuito</b>, con inclusión <b>expresa de la Acidemia Metilmalónica</b>, y crear una comisión técnica que mantenga la lista actualizada con evidencia, para que no vuelva a quedar congelada casi dos décadas.</p>
       <ul>
-        <li>Lista inicial de 20 enfermedades tratables, incluyendo AMM, MSUD, aciduria glutárica tipo I, homocistinuria y defectos del ciclo de la urea.</li>
-        <li>Comisión Técnica Permanente (genetistas, neonatólogos, metabolistas, laboratorios, economistas de la salud y pacientes) que revisa la lista cada 3 años.</li>
-        <li>Estándares de calidad, registro provincial de screening y tiempos máximos de notificación.</li>
-        <li>Informe de impacto presupuestario y convenios con laboratorios para garantizar acceso sin demora.</li>
-        <li>Campañas de capacitación y comunicación pública.</li>
+        <li><b>Lista inicial de alrededor de 20 enfermedades tratables</b>, incluyendo AMM, MSUD (enfermedad de la orina con olor a jarabe de arce), aciduria glutárica tipo I, homocistinuria y defectos del ciclo de la urea.</li>
+        <li><b>Comisión Técnica Permanente</b> —genetistas, neonatólogos, especialistas en metabolismo, laboratorios, economistas de la salud y pacientes— que revisa y actualiza la lista cada 3 años.</li>
+        <li>Estándares de calidad, <b>registro provincial de pesquisa</b> y <b>tiempos máximos</b> de notificación y derivación.</li>
+        <li>Convenios con laboratorios de referencia para garantizar el acceso <b>sin demora ni costo</b> para la familia.</li>
+        <li><b>Informe de impacto presupuestario</b> que muestre el costo real y el ahorro de detectar a tiempo.</li>
+        <li>Campañas de capacitación profesional y de comunicación pública.</li>
       </ul>
+      <p style="color:var(--ink-soft);margin:16px 0 0"><b>Por qué este camino.</b> Es el <b>objetivo de fondo</b>: convierte la detección temprana en un <b>derecho</b>, no en un privilegio. Cuesta más y lleva más discusión, pero es el que de verdad cierra el vacío.</p>
     </div>
 
     <div class="callbox reveal">
@@ -669,7 +748,7 @@
     <div class="fgrid">
       <div>
         <h5>Ley Alma</h5>
-        <p>Por Alma Berteli Quevedo. Para que la información llegue a tiempo y ninguna familia tenga que enterarse demasiado tarde de que el estudio existía.</p>
+        <p>Por Alma Berteli Quevedo. Para que la información llegue a tiempo y que ninguna familia tenga que pasar por el mismo dolor.</p>
       </div>
       <div class="fcol">
         <b>El sitio</b>
@@ -753,7 +832,7 @@ const NAC = { name:'Fundación Bioquímica Argentina (FBA)', type:'priv', amm:tr
   note:'Ofrece un panel ampliado de ~20 errores congénitos del metabolismo por espectrometría de masa en tándem (incluye Acidemia Metilmalónica). Recibe muestras en papel de filtro derivadas desde laboratorios de todo el país.',
   meta:'Alcance nacional · fba.org.ar · Consultá costo, envío de muestra y tiempos.' };
 
-const BASIC = 'El panel básico de <b>6 enfermedades</b> es <b>gratuito y obligatorio</b> en toda maternidad pública o privada. La <b>AMM no está incluida</b>: para buscarla necesitás la pesquisa ampliada.';
+const BASIC = 'El panel básico de <b>6 enfermedades</b> es <b>gratuito y obligatorio</b> en toda maternidad pública o privada. La <b>AMM no está incluida</b>: para buscarla necesitás la pesquisa ampliada, que además arroja resultados de <b>decenas de otras enfermedades metabólicas</b> que hoy quedan fuera del panel obligatorio.';
 
 const PROV = {
   'CABA':{ labs:[
